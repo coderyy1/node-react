@@ -11,5 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "koa": "^2.13.3",
+    "koa-body": "^4.2.0",
+    "koa-cors": "^0.0.16",
+    "koa-redis": "^4.0.1",
+    "koa-router": "^10.1.1",
+    "koa-session-minimal": "^4.0.1",
+    "mysql": "^2.18.1"
   }
 }

@@ -2,6 +2,7 @@ const Koa = require("koa");
 const koaBody = require("koa-body");
 const cors = require("koa-cors");
 const db = require("./db/connectDB");
+const registerRouter = require("./routes");
 
 const app = new Koa();
 
@@ -18,6 +19,8 @@ app.use(koaBody());
 //   }
 // });
 
-app.listen(8000, () => {
-  console.log("服务器启动成功,请访问localhost:8000");
+registerRouter(app).then(() => {
+  app.listen(8000, () => {
+    console.log("服务器启动成功,请访问localhost:8000");
+  });
 });

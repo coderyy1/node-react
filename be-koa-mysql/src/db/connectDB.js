@@ -19,8 +19,8 @@ exports.query = function (sql, values) {
           code: 500,
         });
       } else {
-        console.log("连接数据库成功");
-        connection.query(sql, values, (err, results) => {
+        // console.log("连接数据库成功");
+        connection.query(sql, values, (err, res) => {
           if (err) {
             reject(err);
             resolve({
